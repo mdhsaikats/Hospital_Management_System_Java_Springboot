@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System - Login</title>
+    <link rel="stylesheet" th:href="@{/landing.css}">
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form th:action="@{/login}" method="post">
+            <input type="text" name="username" placeholder="Username" class="input-field" required>
+            <input type="password" name="password" placeholder="Password" class="input-field" required>
+            <button type="submit" class="login-btn">Login</button>
+
+            <p th:if="${error}" th:text="${error}" class="error-text"></p>
+        </form>
+        <a href="#" class="forgot-password">Forgot Password?</a>
+    </div>
+    
+    <script th:src="@{/landing.js}"></script>
+</body>
+</html>
