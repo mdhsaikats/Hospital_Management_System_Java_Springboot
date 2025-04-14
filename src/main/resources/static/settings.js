@@ -106,3 +106,42 @@ function savePermissions(event) {
     alert("Permissions updated for role: " + role);
     document.getElementById("permissionsDropdown").style.display = "none";
 }
+
+    function addUser() {
+        const user = {
+            fullName: document.getElementById("fullName").value,
+            idNumber: document.getElementById("idNumber").value,
+            designation: document.getElementById("designation").value,
+            email: document.getElementById("email").value,
+            phone: document.getElementById("phone").value,
+            address: document.getElementById("address").value,
+            dateOfBirth: document.getElementById("dob").value,
+            joiningDate: document.getElementById("joiningDate").value,
+            username: document.getElementById("username").value,
+            password: document.getElementById("password").value,
+        };
+
+        // Optional: Validate passwords
+        const confirmPassword = document.getElementById("confirmPassword").value;
+        if (user.password !== confirmPassword) {
+            alert("Passwords do not match!");
+            return;
+        }
+
+        fetch("/addUser", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(user),
+        })
+        .then(response => {
+            if (response.ok) {
+                alert("User added successfully!");
+                location.reload(); // or update UI as needed
+            } else {
+                alert("Error adding user.");
+            }
+        })
+        .catch(error => console.error("Error:", error));
+    }

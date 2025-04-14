@@ -36,6 +36,14 @@ public class LoginController {
         }
     }
 
+    @PostMapping("/addUser")
+    public String addUser(User user) {
+    userRepository.save(user);
+    return "redirect:/settings"; // or show a success page
+}
+
+
+
     @GetMapping("/dashboard")
     public String dashboard() {
         return "dashboard"; // Create dashboard.html in templates

@@ -93,23 +93,28 @@
                 <div class="settings-section">
                     <h3>User Management</h3>
                     <div class="user-dropdown">
-                        <button onclick="toggleDropdown()">Add New Admin</button>
-                        <div class="user-dropdown-content" id="dropdownContent">
-                            <input type="text" id="fullName" placeholder="Full Name">
-                            <input type="text" id="idNumber" placeholder="ID Number">
-                            <input type="text" id="designation" placeholder="Designation">
-                            <input type="email" id="email" placeholder="Email">
-                            <input type="tel" id="phone" placeholder="Phone Number">
-                            <input type="text" id="address" placeholder="Address">
-                            <h5>Date Of Birth</h5>
-                            <input type="date" id="dob" placeholder="Date of Birth">
-                            <h5>Joining Date</h5>
-                            <input type="date" id="joiningDate" placeholder="Joining Date">
-                            <input type="password" id="password" placeholder="Password">
-                            <input type="password" id="confirmPassword" placeholder="Confirm Password">
-                            <button onclick="addUser()">Submit</button>
-                        </div>
+                            <button onclick="toggleDropdown()">Add New Admin</button>
+                            <div class="user-dropdown-content" id="dropdownContent">
+                                <form action="/addUser" method="post">
+                                    <input type="text" name="fullName" placeholder="Full Name">
+                                    <input type="text" name="idNumber" placeholder="ID Number">
+                                    <input type="text" name="designation" placeholder="Designation">
+                                    <input type="email" name="email" placeholder="Email">
+                                    <input type="tel" name="phone" placeholder="Phone Number">
+                                    <input type="text" name="address" placeholder="Address">
+                                    <h5>Date Of Birth</h5>
+                                    <input type="date" name="dateOfBirth">
+                                    <h5>Joining Date</h5>
+                                    <input type="date" name="joiningDate">
+                                    <input type="text" name="username" placeholder="Username">
+                                    <input type="password" name="password" placeholder="Password" autocomplete="off">
+                                    <input type="password" name="confirmPassword" placeholder="Confirm Password" autocomplete="off">
+                                    <button type="submit">Submit</button>
+                                </form>
+                            </div>
+                            
                     </div>
+                    
 
             
                 <!-- Security Settings Section -->
