@@ -96,19 +96,19 @@
                             <button onclick="toggleDropdown()">Add New Admin</button>
                             <div class="user-dropdown-content" id="dropdownContent">
                                 <form action="/addUser" method="post">
-                                    <input type="text" name="fullName" placeholder="Full Name">
-                                    <input type="text" name="idNumber" placeholder="ID Number">
-                                    <input type="text" name="designation" placeholder="Designation">
-                                    <input type="email" name="email" placeholder="Email">
-                                    <input type="tel" name="phone" placeholder="Phone Number">
+                                    <input type="text" name="fullName" placeholder="Full Name" required>
+                                    <input type="text" name="idNumber" placeholder="ID Number" required>
+                                    <input type="text" name="designation" placeholder="Designation" required>
+                                    <input type="email" name="email" placeholder="Email" required>
+                                    <input type="tel" name="phone" placeholder="Phone Number" required>
                                     <input type="text" name="address" placeholder="Address">
                                     <h5>Date Of Birth</h5>
-                                    <input type="date" name="dateOfBirth">
+                                    <input type="date" name="dateOfBirth" required>
                                     <h5>Joining Date</h5>
-                                    <input type="date" name="joiningDate">
-                                    <input type="text" name="username" placeholder="Username">
-                                    <input type="password" name="password" placeholder="Password" autocomplete="off">
-                                    <input type="password" name="confirmPassword" placeholder="Confirm Password" autocomplete="off">
+                                    <input type="date" name="joiningDate" required>
+                                    <input type="text" name="username" placeholder="Username" required>
+                                    <input type="password" name="password" placeholder="Password" autocomplete="off" required>
+                                    <input type="password" name="confirmPassword" placeholder="Confirm Password" autocomplete="off" required>
                                     <button type="submit">Submit</button>
                                 </form>
                             </div>
