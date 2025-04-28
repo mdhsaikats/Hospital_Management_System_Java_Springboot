@@ -102,9 +102,6 @@ hospital-management-system/
 Clone the repository:
 
 
-bash
-Copy
-Edit
 git clone https://github.com/your-username/hospital-management-system.git
 
 
@@ -129,9 +126,6 @@ From your IDE: Run HospitalManagementApplication.java.
 Or using terminal:
 
 
-bash
-Copy
-Edit
 mvn spring-boot:run
 
 
@@ -139,6 +133,52 @@ Access the system:
 
 
 Open your browser and go to: http://localhost:8080/
+
+
+
+✨ Future Improvements
+
+
+Role-based access (Admin, Doctor, Patient)
+
+
+Email notifications for appointments
+
+
+Hospital Inventory Management (Pharmacy, Equipment)
+
+
+User Profile Management
+
+
+Mobile-friendly Design
+
+
+📸 Screenshots
+
+
+page  URL  -  https://mdhsaikats.github.io/Hospital-Management-System/
+
+
+user: admin
+
+
+password: 29112003
+
+
+🤝 Contributing
+
+
+Pull requests are welcome! Feel free to open issues to discuss new features or report bugs.
+
+
+📄 License
+
+
+This project is licensed under the MIT License.
+
+
+
 
 
 
